@@ -14,30 +14,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     let stackView = UIStackView()
     let pageControl = UIPageControl()
     let continueButton = UIButton()
-    var page0View = UIView()
-    var page1View = UIView()
-    var page2View = UIView()
+    var page0View: customView!
+    var page1View: customView!
+    var page2View: customView!
     
-    let labelZero: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "First Page"
-        return label
-    }()
     
-    let labelOne: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Second Page"
-        return label
-    }()
-    
-    let labelTwo: UILabel = {
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Third Page"
-        return label
-    }()
  // MARK: Start Load View Code
     override func loadView() {
         super.loadView()
@@ -85,63 +66,38 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         pageControl.addTarget(self, action: #selector(pageControlTapped(sender:)), for: .valueChanged)
         
         //MARK: The Page views
-        stackView.addArrangedSubview(page0View)
-        page0View.translatesAutoresizingMaskIntoConstraints = false
-        page0View.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        
-        page0View.addSubview(labelZero)
-         NSLayoutConstraint.activate([
-            labelZero.centerXAnchor.constraint(equalTo: page0View.centerXAnchor),
-            labelZero.centerYAnchor.constraint(equalTo: page0View.centerYAnchor)
-         ])
-        //--------------------------------------------------
-        stackView.addArrangedSubview(page1View)
-        page1View.translatesAutoresizingMaskIntoConstraints = false
-        page1View.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        
-        page1View.addSubview(labelOne)
-        NSLayoutConstraint.activate([
-           labelOne.centerXAnchor.constraint(equalTo: page1View.centerXAnchor),
-           labelOne.centerYAnchor.constraint(equalTo: page1View.centerYAnchor)
-        ])
-        //---------------------------------------------------
-        stackView.addArrangedSubview(page2View)
-        page2View.translatesAutoresizingMaskIntoConstraints = false
-        page2View.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
-        
-        page2View.addSubview(labelTwo)
-        NSLayoutConstraint.activate([
-           labelTwo.centerXAnchor.constraint(equalTo: page2View.centerXAnchor),
-           labelTwo.centerYAnchor.constraint(equalTo: page2View.centerYAnchor)
-        ])
-        
-    //MARK: The Button
-        self.page2View.addSubview(continueButton)
-        continueButton.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            continueButton.topAnchor.constraint(equalTo: labelTwo.bottomAnchor, constant: 10)
-            //continueButton.contentVerticalAlignment
-        ])
+//        stackView.addArrangedSubview(page0View)
+//        page0View.translatesAutoresizingMaskIntoConstraints = false
+//        page0View.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
+//
+//        page0View.addSubview(labelZero)
+//         NSLayoutConstraint.activate([
+//            labelZero.centerXAnchor.constraint(equalTo: page0View.centerXAnchor),
+//            labelZero.centerYAnchor.constraint(equalTo: page0View.centerYAnchor)
+//         ])
+//        //--------------------------------------------------
+//        stackView.addArrangedSubview(page1View)
+//        page1View.translatesAutoresizingMaskIntoConstraints = false
+//        page1View.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
+//
+//        page1View.addSubview(labelOne)
+//        NSLayoutConstraint.activate([
+//           labelOne.centerXAnchor.constraint(equalTo: page1View.centerXAnchor),
+//           labelOne.centerYAnchor.constraint(equalTo: page1View.centerYAnchor)
+//        ])
+//        //---------------------------------------------------
+//        stackView.addArrangedSubview(page2View)
+//        page2View.translatesAutoresizingMaskIntoConstraints = false
+//        page2View.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 1).isActive = true
+//
+//        page2View.addSubview(labelTwo)
+//        NSLayoutConstraint.activate([
+//           labelTwo.centerXAnchor.constraint(equalTo: page2View.centerXAnchor),
+//           labelTwo.centerYAnchor.constraint(equalTo: page2View.centerYAnchor)
+//        ])
 
     }
     //MARK: Styling and More
-    func addGradientToView(view: UIView){
-        //gradient layer
-        let gradientLayer = CAGradientLayer()
-        
-        //define colors
-        gradientLayer.colors = [UIColor.red.cgColor, UIColor.green.cgColor]
-        
-        //define locations of colors as NSNumbers in range from 0.0 to 1.0
-        //if locations not provided the colors will spread evenly
-//        gradientLayer.locations=[0.0,1]
-        
-        //define frame
-        gradientLayer.frame = view.bounds
-        
-        //insert the gradient layer to the view layer
-        view.layer.insertSublayer(gradientLayer, at: 0)
-    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
       let pageWidth = scrollView.bounds.width
