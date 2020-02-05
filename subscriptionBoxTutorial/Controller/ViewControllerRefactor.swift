@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  ViewControllerRefactor.swift
 //  subscriptionBoxTutorial
 //
-//  Created by Henry Calderon on 1/28/20.
+//  Created by Henry Calderon on 2/4/20.
 //  Copyright © 2020 Henry Calderon. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewControllerRefactor: UIViewController {
     
     var firstView: customView!
     var secondView: customView!
@@ -92,6 +92,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             pageControl.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
-
