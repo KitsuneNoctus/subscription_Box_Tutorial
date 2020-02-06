@@ -92,6 +92,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             pageControl.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    
+    func continueButtonTapped(){
+        
+    }
 
 }
 

@@ -99,6 +99,8 @@ class customView: UIView {
                 continueButton.heightAnchor.constraint(equalToConstant: 50)
             ])
         }
+        
+        
     }
     
     func setGradient(){
