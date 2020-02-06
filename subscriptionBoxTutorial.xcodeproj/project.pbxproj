@@ -72,8 +72,8 @@
 		3F575EB823E9EE960039CF3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F727F5023EA9FA600BA4434 /* ViewControllerStorage.swift */,
 				3F575EC223EA07320039CF3B /* ViewControllerRefactor.swift */,
+				3F727F5023EA9FA600BA4434 /* ViewControllerStorage.swift */,
 				3FD8B5E623E0BC1D006DCE5C /* ViewController.swift */,
 				3F575EBA23E9FC630039CF3B /* LoginViewController.swift */,
 				3F575EBC23E9FC870039CF3B /* HomeViewController.swift */,
