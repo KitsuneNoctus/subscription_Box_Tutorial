@@ -75,6 +75,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         firstView = customView(message:"Tell us about your pet's personality", imageName: "dog", isLastPage: false, color: #colorLiteral(red: 0.9556549191, green: 0.1256401241, blue: 0.3329801559, alpha: 1))
         secondView = customView(message: "Subscribe to your first box", imageName: "phone", isLastPage: false, color: #colorLiteral(red: 0.9392294288, green: 0.3101889491, blue: 0.02487670258, alpha: 1))
         thirdView = customView(message: "Get snacks and toys that your pet will love", imageName: "petFood", isLastPage: true, color: #colorLiteral(red: 0.3467746973, green: 0.2016363442, blue: 0.9727033973, alpha: 1))
+        thirdView.continueButton.addTarget(self, action: #selector(continueTapped), for: .touchUpInside)
         pagesArray = [firstView,secondView,thirdView]
         
         for page in pagesArray{
@@ -91,6 +92,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             pageControl.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+    
+    @objc func continueTapped(){
+        self.view.window!.rootViewController = LoginViewController()
     }
 
 }
