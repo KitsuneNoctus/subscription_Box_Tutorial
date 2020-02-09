@@ -108,7 +108,7 @@ class HomeViewController: UIViewController {
     }
 
     @objc func pastTapped(){
-           self.view.window!.rootViewController = PastBoxesViewController()
+        self.view.window!.rootViewController = PastBoxesViewController()
     }
     
 
