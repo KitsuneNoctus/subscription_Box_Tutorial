@@ -69,15 +69,33 @@ class LoginViewController: UIViewController {
         button.backgroundColor = UIColor(white: 1.0, alpha: 0.9)
         return button
     }()
-
+//MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
         
-        self.view.addSubview(loginButton)
+        self.view.addSubview(stackView)
         NSLayoutConstraint.activate([
-            loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            loginButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+            stackView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.65),
+            stackView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.5),
+            stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+        
+        stackView.addSubview(usernameTextField)
+        NSLayoutConstraint.activate([
+            usernameTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor)
+        ])
+    
+        stackView.addSubview(passwordTextField)
+        NSLayoutConstraint.activate([
+            passwordTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor)
+        ])
+        
+        stackView.addSubview(loginButton)
+        NSLayoutConstraint.activate([
+            loginButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
+            loginButton.centerYAnchor.constraint(equalTo: stackView.centerYAnchor)
         ])
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         
