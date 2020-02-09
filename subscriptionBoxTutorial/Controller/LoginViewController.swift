@@ -53,7 +53,8 @@ class LoginViewController: UIViewController {
     }()
     
     let imageView: UIImageView = {
-        let imageView = UIImageView()
+        var imageView = UIImageView()
+//        simageView = "shipping"
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -81,6 +82,8 @@ class LoginViewController: UIViewController {
             stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
+        
+        stackView.addSubview(imageView)
         
         stackView.addSubview(usernameTextField)
         NSLayoutConstraint.activate([
