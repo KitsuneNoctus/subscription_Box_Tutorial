@@ -78,33 +78,28 @@ class HomeViewController: UIViewController {
             newBoxButton.widthAnchor.constraint(equalTo: container.widthAnchor),
             newBoxButton.heightAnchor.constraint(equalToConstant: 50),
             //pastBoxesButton
-            pastBoxesButton.widthAnchor.constraint(equalTo: container.widthAnchor),
-            pastBoxesButton.heightAnchor.constraint(equalToConstant: 50),
-            pastBoxesButton.topAnchor.constraint(equalTo: newBoxButton.bottomAnchor, constant:30 ),
+//            pastBoxesButton.widthAnchor.constraint(equalTo: container.widthAnchor),
+//            pastBoxesButton.heightAnchor.constraint(equalToConstant: 50),
+//            pastBoxesButton.topAnchor.constraint(equalTo: newBoxButton.bottomAnchor, constant:30 ),
             //profileButton
             profileButton.widthAnchor.constraint(equalTo: container.widthAnchor),
             profileButton.heightAnchor.constraint(equalToConstant: 50),
             profileButton.topAnchor.constraint(equalTo: pastBoxesButton.bottomAnchor, constant: 30)
         ])
         
+        NSLayoutConstraint.activate([
+            pastBoxesButton.widthAnchor.constraint(equalTo: container.widthAnchor),
+            pastBoxesButton.heightAnchor.constraint(equalToConstant: 50),
+            pastBoxesButton.topAnchor.constraint(equalTo: newBoxButton.bottomAnchor, constant:30 )
+        ])
         pastBoxesButton.addTarget(self, action: #selector(pastTapped), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
     }
-    
+
     @objc func pastTapped(){
            self.view.window!.rootViewController = PastBoxesViewController()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
