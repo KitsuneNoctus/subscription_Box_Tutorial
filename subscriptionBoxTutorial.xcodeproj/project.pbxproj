@@ -20,6 +20,8 @@
 		3F933E9C23EFD1D100412E2A /* PastBoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933E9B23EFD1D100412E2A /* PastBoxesViewController.swift */; };
 		3F933E9E23EFDB4400412E2A /* shipping.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F933E9D23EFDB4400412E2A /* shipping.png */; };
 		3F933EA123F0B81400412E2A /* PastBoxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933EA023F0B81400412E2A /* PastBoxesCell.swift */; };
+		3F933EA323F0BE4E00412E2A /* NewBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933EA223F0BE4E00412E2A /* NewBoxViewController.swift */; };
+		3F933EA523F0BF5100412E2A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933EA423F0BF5100412E2A /* ProfileViewController.swift */; };
 		3FD8B5E323E0BC1D006DCE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8B5E223E0BC1D006DCE5C /* AppDelegate.swift */; };
 		3FD8B5E523E0BC1D006DCE5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8B5E423E0BC1D006DCE5C /* SceneDelegate.swift */; };
 		3FD8B5E723E0BC1D006DCE5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8B5E623E0BC1D006DCE5C /* ViewController.swift */; };
@@ -42,6 +44,8 @@
 		3F933E9D23EFDB4400412E2A /* shipping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shipping.png; path = "../../../../../../../Downloads/Shipping_Package_-_Colour/shipping.png"; sourceTree = "<group>"; };
 		3F933E9F23EFDB4900412E2A /* shipping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipping.png; sourceTree = "<group>"; };
 		3F933EA023F0B81400412E2A /* PastBoxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxesCell.swift; sourceTree = "<group>"; };
+		3F933EA223F0BE4E00412E2A /* NewBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxViewController.swift; sourceTree = "<group>"; };
+		3F933EA423F0BF5100412E2A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		3FD8B5DF23E0BC1D006DCE5C /* subscriptionBoxTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = subscriptionBoxTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD8B5E223E0BC1D006DCE5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD8B5E423E0BC1D006DCE5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +86,10 @@
 				3FD8B5E623E0BC1D006DCE5C /* ViewController.swift */,
 				3F575EBA23E9FC630039CF3B /* LoginViewController.swift */,
 				3F575EBC23E9FC870039CF3B /* HomeViewController.swift */,
+				3F933EA223F0BE4E00412E2A /* NewBoxViewController.swift */,
 				3F933E9B23EFD1D100412E2A /* PastBoxesViewController.swift */,
 				3F933EA023F0B81400412E2A /* PastBoxesCell.swift */,
+				3F933EA423F0BF5100412E2A /* ProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -207,8 +213,10 @@
 				3F933E9C23EFD1D100412E2A /* PastBoxesViewController.swift in Sources */,
 				3F575EBF23E9FCAE0039CF3B /* LoginView.swift in Sources */,
 				3F727F5123EA9FA600BA4434 /* ViewControllerStorage.swift in Sources */,
+				3F933EA523F0BF5100412E2A /* ProfileViewController.swift in Sources */,
 				3F575EB623E9EE7E0039CF3B /* customView.swift in Sources */,
 				3FD8B5E323E0BC1D006DCE5C /* AppDelegate.swift in Sources */,
+				3F933EA323F0BE4E00412E2A /* NewBoxViewController.swift in Sources */,
 				3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */,
 				3F933EA123F0B81400412E2A /* PastBoxesCell.swift in Sources */,
 				3F575EC123E9FCC00039CF3B /* HomeView.swift in Sources */,

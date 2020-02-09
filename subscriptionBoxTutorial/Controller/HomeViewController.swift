@@ -86,6 +86,8 @@ class HomeViewController: UIViewController {
             profileButton.heightAnchor.constraint(equalToConstant: 50),
             profileButton.topAnchor.constraint(equalTo: pastBoxesButton.bottomAnchor, constant: 30)
         ])
+        newBoxButton.addTarget(self, action: #selector(newTapped), for: .touchUpInside)
+        profileButton.addTarget(self, action: #selector(profileTapped), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
             pastBoxesButton.widthAnchor.constraint(equalTo: container.widthAnchor),
@@ -95,6 +97,14 @@ class HomeViewController: UIViewController {
         pastBoxesButton.addTarget(self, action: #selector(pastTapped), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func profileTapped(){
+        self.view.window!.rootViewController = ProfileViewController()
+    }
+    
+    @objc func newTapped(){
+        self.view.window!.rootViewController = NewBoxViewController()
     }
 
     @objc func pastTapped(){
