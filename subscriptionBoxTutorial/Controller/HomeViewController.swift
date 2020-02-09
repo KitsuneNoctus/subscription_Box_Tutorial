@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("New Box", for: .normal)
+        button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.purple
         return button
     }()
@@ -44,6 +45,7 @@ class HomeViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Past Boxes", for: .normal)
+        button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.purple
         return button
     }()
@@ -52,10 +54,11 @@ class HomeViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Profile", for: .normal)
+        button.layer.cornerRadius = 10
         button.backgroundColor = UIColor.purple
         return button
     }()
-
+//MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .green
@@ -83,8 +86,14 @@ class HomeViewController: UIViewController {
             profileButton.heightAnchor.constraint(equalToConstant: 50),
             profileButton.topAnchor.constraint(equalTo: pastBoxesButton.bottomAnchor, constant: 30)
         ])
+        
+        pastBoxesButton.addTarget(self, action: #selector(pastTapped), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func pastTapped(){
+           self.view.window!.rootViewController = PastBoxesViewController()
     }
     
 
