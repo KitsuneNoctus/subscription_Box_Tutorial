@@ -9,9 +9,35 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+//    let navBar: UINavigationBar!
+    
+    let container: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.spacing = 30
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.distribution = .fillEqually
+        return view
+    }()
+    
+//    let newBoxButton: UIButton = {
+//        let button = UIButton()
+//        return button
+//    }()
+//
+//    let pastBoxesButton: UIButton = {
+//        let button = UIButton()
+//        return button
+//    }()
+//
+//    let profileButton: UIButton = {
+//        let button = UIButton()
+//        return button
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .green
 
         // Do any additional setup after loading the view.
     }

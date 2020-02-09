@@ -11,6 +11,9 @@ import UIKit
 class LoginViewController: UIViewController {
     //Once again testing
     
+    var loginView: UIView!
+    var color: UIColor!
+    
 //    var loginTitle: UILabel!
 //    var usernameTextField: UITextField!
 //    var passwordTextField: UITextField!
@@ -69,9 +72,32 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .blue
+        
+        self.view.addSubview(loginButton)
+        NSLayoutConstraint.activate([
+            loginButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            loginButton.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+        loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    @objc func loginTapped(){
+           self.view.window!.rootViewController = HomeViewController()
+    }
+    
+//    func setGradient(){
+//        let gradientLayer = CAGradientLayer()
+//        gradientLayer.colors = [color.cgColor, UIColor.white.cgColor]
+//        gradientLayer.locations = [0.0,3.0]
+//        gradientLayer.frame = self.bounds
+//        layer.insertSublayer(gradientLayer, at: 0)
+//    }
+    
+    
     
 
     /*
