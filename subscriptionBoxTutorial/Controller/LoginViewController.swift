@@ -48,13 +48,13 @@ class LoginViewController: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.distribution = .fill
+        stackView.distribution = .fillEqually
         return stackView
     }()
     
     let imageView: UIImageView = {
         var imageView = UIImageView()
-//        simageView = "shipping"
+//        imageView = UIImage(named: "shipping")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -75,6 +75,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
         
+        imageView.image = UIImage(named: "shipping")
+        
         self.view.addSubview(stackView)
         NSLayoutConstraint.activate([
             stackView.widthAnchor.constraint(equalTo: self.view.widthAnchor, multiplier: 0.65),
@@ -83,19 +85,19 @@ class LoginViewController: UIViewController {
             stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
         
-        stackView.addSubview(imageView)
+        stackView.addArrangedSubview(imageView)
         
-        stackView.addSubview(usernameTextField)
+        stackView.addArrangedSubview(usernameTextField)
         NSLayoutConstraint.activate([
             usernameTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor)
         ])
     
-        stackView.addSubview(passwordTextField)
+        stackView.addArrangedSubview(passwordTextField)
         NSLayoutConstraint.activate([
             passwordTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor)
         ])
         
-        stackView.addSubview(loginButton)
+        stackView.addArrangedSubview(loginButton)
         NSLayoutConstraint.activate([
             loginButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
             loginButton.centerYAnchor.constraint(equalTo: stackView.centerYAnchor)
@@ -107,9 +109,13 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginTapped(){
-           self.view.window!.rootViewController = HomeViewController()
+        self.view.window!.rootViewController = HomeViewController()
+//        let nextVC = HomeViewController()
+//        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+//    let nextVC = ViewController()
+//    self.navigationController?.pushViewController(nextVC, animated: true)
 //    func setGradient(){
 //        let gradientLayer = CAGradientLayer()
 //        gradientLayer.colors = [color.cgColor, UIColor.white.cgColor]
