@@ -52,7 +52,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setScrollView(){
-        scrollView.delegate = self as? UIScrollViewDelegate
+        scrollView.delegate = self
+        //Hides nav bar
+        self.navigationController?.isNavigationBarHidden = true
+        
         view.addSubview(scrollView)
         
         scrollView.addSubview(container)

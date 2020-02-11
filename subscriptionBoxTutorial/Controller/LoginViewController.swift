@@ -98,10 +98,10 @@ class LoginViewController: UIViewController {
         ])
         
         stackView.addArrangedSubview(loginButton)
-        NSLayoutConstraint.activate([
-            loginButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
-            loginButton.centerYAnchor.constraint(equalTo: stackView.centerYAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//            loginButton.centerXAnchor.constraint(equalTo: stackView.centerXAnchor),
+//            loginButton.centerYAnchor.constraint(equalTo: stackView.centerYAnchor)
+//        ])
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         
 

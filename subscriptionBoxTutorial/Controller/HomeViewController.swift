@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     let container: UIStackView = {
         let view = UIStackView()
         view.axis = .vertical
-        //view.spacing = 30
+        view.spacing = 30
         view.translatesAutoresizingMaskIntoConstraints = false
         view.distribution = .fillEqually
         return view
@@ -61,6 +61,13 @@ class HomeViewController: UIViewController {
 //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.view.window!.rootViewController = self
+//        self.view.window!.rootViewController = PastBoxesViewController()
+        
+        self.navigationController?.initRootViewController(vc: self)
+        self.navigationController?.isNavigationBarHidden = false
+        self.title = "Home"
+        
         self.view.backgroundColor = .green
         self.view.addSubview(container)
         
@@ -70,9 +77,9 @@ class HomeViewController: UIViewController {
             container.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -30)
         ])
         
-        container.addSubview(newBoxButton)
-        container.addSubview(pastBoxesButton)
-        container.addSubview(profileButton)
+        container.addArrangedSubview(newBoxButton)
+        container.addArrangedSubview(pastBoxesButton)
+        container.addArrangedSubview(profileButton)
         NSLayoutConstraint.activate([
             //newBoxButton
             newBoxButton.widthAnchor.constraint(equalTo: container.widthAnchor),
@@ -84,7 +91,7 @@ class HomeViewController: UIViewController {
             //profileButton
             profileButton.widthAnchor.constraint(equalTo: container.widthAnchor),
             profileButton.heightAnchor.constraint(equalToConstant: 50),
-            profileButton.topAnchor.constraint(equalTo: pastBoxesButton.bottomAnchor, constant: 30)
+//            profileButton.topAnchor.constraint(equalTo: pastBoxesButton.bottomAnchor, constant: 30)
         ])
         newBoxButton.addTarget(self, action: #selector(newTapped), for: .touchUpInside)
         profileButton.addTarget(self, action: #selector(profileTapped), for: .touchUpInside)
@@ -92,26 +99,25 @@ class HomeViewController: UIViewController {
         NSLayoutConstraint.activate([
             pastBoxesButton.widthAnchor.constraint(equalTo: container.widthAnchor),
             pastBoxesButton.heightAnchor.constraint(equalToConstant: 50),
-            pastBoxesButton.topAnchor.constraint(equalTo: newBoxButton.bottomAnchor, constant:30 )
+//            pastBoxesButton.topAnchor.constraint(equalTo: newBoxButton.bottomAnchor, constant:30 )
         ])
         pastBoxesButton.addTarget(self, action: #selector(pastTapped), for: .touchUpInside)
 
         // Do any additional setup after loading the view.
     }
-    
+    //======
     @objc func profileTapped(){
-        self.view.window!.rootViewController = ProfileViewController()
+//        self.view.window!.rootViewController = ProfileViewController()
     }
     
     @objc func newTapped(){
-        self.view.window!.rootViewController = NewBoxViewController()
+//        self.view.window!.rootViewController = NewBoxViewController()
     }
 
     @objc func pastTapped(){
-        //        self.view.window!.rootViewController = PastBoxesViewController()
-        //        let nextVC = PastBoxesViewController()
-        //        self.navigationController?.pushViewController(nextVC, animated: true)
-        self.presentingViewController?.navigationController?.pushViewController(PastBoxesViewController(), animated: true)
+//        self.view.window!.rootViewController = PastBoxesViewController()
+        let vc = PastBoxesViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 

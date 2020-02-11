@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F2BA73223F31FC800E91400 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA73123F31FC800E91400 /* File.swift */; };
+		3F2BA73423F343F000E91400 /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA73323F343F000E91400 /* navigationController.swift */; };
 		3F575EB623E9EE7E0039CF3B /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EB523E9EE7E0039CF3B /* customView.swift */; };
 		3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EBA23E9FC630039CF3B /* LoginViewController.swift */; };
 		3F575EBD23E9FC870039CF3B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EBC23E9FC870039CF3B /* HomeViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		3F2BA73123F31FC800E91400 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		3F2BA73323F343F000E91400 /* navigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
 		3F575EB523E9EE7E0039CF3B /* customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		3F575EBA23E9FC630039CF3B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F575EBC23E9FC870039CF3B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				3F727F4C23EA9B1A00BA4434 /* phone.png */,
 				3F727F4A23EA9AA800BA4434 /* petFood.png */,
 				3FD8B5F023E0BC1E006DCE5C /* Info.plist */,
+				3F2BA73323F343F000E91400 /* navigationController.swift */,
 			);
 			path = subscriptionBoxTutorial;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				3FD8B5E323E0BC1D006DCE5C /* AppDelegate.swift in Sources */,
 				3F933EA323F0BE4E00412E2A /* NewBoxViewController.swift in Sources */,
 				3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */,
+				3F2BA73423F343F000E91400 /* navigationController.swift in Sources */,
 				3F933EA123F0B81400412E2A /* PastBoxesCell.swift in Sources */,
 				3F2BA73223F31FC800E91400 /* File.swift in Sources */,
 				3F575EC123E9FCC00039CF3B /* HomeView.swift in Sources */,
