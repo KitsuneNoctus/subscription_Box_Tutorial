@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2BA73223F31FC800E91400 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA73123F31FC800E91400 /* File.swift */; };
 		3F575EB623E9EE7E0039CF3B /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EB523E9EE7E0039CF3B /* customView.swift */; };
 		3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EBA23E9FC630039CF3B /* LoginViewController.swift */; };
 		3F575EBD23E9FC870039CF3B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EBC23E9FC870039CF3B /* HomeViewController.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2BA73123F31FC800E91400 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3F575EB523E9EE7E0039CF3B /* customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		3F575EBA23E9FC630039CF3B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F575EBC23E9FC870039CF3B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		3F575EB923E9F4490039CF3B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3F2BA73123F31FC800E91400 /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				3F933EA323F0BE4E00412E2A /* NewBoxViewController.swift in Sources */,
 				3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */,
 				3F933EA123F0B81400412E2A /* PastBoxesCell.swift in Sources */,
+				3F2BA73223F31FC800E91400 /* File.swift in Sources */,
 				3F575EC123E9FCC00039CF3B /* HomeView.swift in Sources */,
 				3F575EC323EA07320039CF3B /* ViewControllerRefactor.swift in Sources */,
 				3FD8B5E523E0BC1D006DCE5C /* SceneDelegate.swift in Sources */,
