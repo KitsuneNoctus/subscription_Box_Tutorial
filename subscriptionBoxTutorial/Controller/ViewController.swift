@@ -98,7 +98,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func continueTapped(){
-        self.view.window!.rootViewController = LoginViewController()
+//        self.view.window!.rootViewController = LoginViewController()
+        let nextVC = LoginViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 
 }
