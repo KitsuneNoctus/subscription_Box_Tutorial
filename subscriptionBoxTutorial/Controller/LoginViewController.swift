@@ -75,6 +75,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
         
+        self.navigationController?.initRootViewController(vc: self)
+        
         imageView.image = UIImage(named: "shipping")
         
         self.view.addSubview(stackView)
@@ -109,9 +111,9 @@ class LoginViewController: UIViewController {
     }
     
     @objc func loginTapped(){
-        self.view.window!.rootViewController = HomeViewController()
-//        let nextVC = HomeViewController()
-//        self.navigationController?.pushViewController(nextVC, animated: true)
+//        self.view.window!.rootViewController = HomeViewController()
+        let nextVC = HomeViewController()
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
 //    let nextVC = ViewController()

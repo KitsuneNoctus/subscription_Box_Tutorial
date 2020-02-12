@@ -8,49 +8,53 @@
 
 import UIKit
 
-class PastBoxesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let pastBoxesArray = [String](repeating: "Past Order", count: 10)
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pastBoxesArray.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pastBoxesCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row) \(pastBoxesArray[indexPath.row])"
-        return cell
-    }
+//class PastBoxesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PastBoxesViewController: UIViewController {
     
     
-    let table: UITableView = {
-       let table = UITableView()
-       table.translatesAutoresizingMaskIntoConstraints = false
-       table.rowHeight = 100
-       return table
-    }()
+//    let pastBoxesArray = [String](repeating: "Past Order", count: 10)
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return pastBoxesArray.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "pastBoxesCell", for: indexPath)
+//        cell.textLabel?.text = "\(indexPath.row) \(pastBoxesArray[indexPath.row])"
+//        return cell
+//    }
+//
+//
+//    let table: UITableView = {
+//       let table = UITableView()
+//       table.translatesAutoresizingMaskIntoConstraints = false
+//       table.rowHeight = 100
+//       return table
+//    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTable()
+        //This sets root view controller to itself so it can be navigated away from I think
+        self.navigationController?.initRootViewController(vc: self)
+//        setTable()
         self.view.backgroundColor = .black
 
         // Do any additional setup after loading the view.
     }
     
-    func setTable(){
-        self.view.addSubview(table)
-        NSLayoutConstraint.activate([
-            table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-            table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-            table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-            table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
-        ])
-        
-        table.register(PastBoxesCell.self, forCellReuseIdentifier: "PastBoxesCell")
-        table.delegate = self
-        table.dataSource = self
-    }
+//    func setTable(){
+//        self.view.addSubview(table)
+//        NSLayoutConstraint.activate([
+//            table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+//            table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+//            table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+//            table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+//        ])
+//
+//        table.register(PastBoxesCell.self, forCellReuseIdentifier: "PastBoxesCell")
+//        table.delegate = self
+//        table.dataSource = self
+//    }
     
 
     /*

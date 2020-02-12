@@ -64,6 +64,8 @@ class HomeViewController: UIViewController {
 //        self.view.window!.rootViewController = self
 //        self.view.window!.rootViewController = PastBoxesViewController()
         
+//        self.navigationController?.initRootViewController(vc: self)
+        
         self.navigationController?.initRootViewController(vc: self)
         self.navigationController?.isNavigationBarHidden = false
         self.title = "Home"
