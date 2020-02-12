@@ -25,12 +25,13 @@ class PastBoxesViewController: UIViewController {
 //    }
 //
 //
-//    let table: UITableView = {
-//       let table = UITableView()
-//       table.translatesAutoresizingMaskIntoConstraints = false
-//       table.rowHeight = 100
-//       return table
-//    }()
+    //MARK: Setting up UITableView
+    let table: UITableView = {
+       let table = UITableView()
+       table.translatesAutoresizingMaskIntoConstraints = false
+       table.rowHeight = 100
+       return table
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
