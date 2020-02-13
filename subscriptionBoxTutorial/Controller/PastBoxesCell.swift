@@ -10,6 +10,8 @@ import UIKit
 
 class PastBoxesCell: UITableViewCell {
     
+    static var identifier = "pastBoxesCell"
+    
     let background: UIView = {
         let background = UIView()
         background.layer.cornerRadius = 5
