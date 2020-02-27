@@ -41,7 +41,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
-
+//MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
         setScrollView()
@@ -50,7 +50,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
         // Do any additional setup after loading the view.
     }
-    
+//MARK: The Functions that load up
     func setScrollView(){
         scrollView.delegate = self
         //Hides nav bar

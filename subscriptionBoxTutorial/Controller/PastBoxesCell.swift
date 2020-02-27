@@ -52,5 +52,10 @@ class PastBoxesCell: UITableViewCell {
         ])
         
     }
+    
+    func setContents(box: Box){
+        textLabel?.text = box.date
+
+    }
 
 }

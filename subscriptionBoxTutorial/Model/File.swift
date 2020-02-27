@@ -22,6 +22,7 @@ struct Box {
 struct Category {
     let name: String
 }
+
 //MARK: My Own Additions
 // My own custom model data
 enum Themes {

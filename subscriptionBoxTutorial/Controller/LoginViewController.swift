@@ -112,7 +112,7 @@ class LoginViewController: UIViewController {
     
     @objc func loginTapped(){
 //        self.view.window!.rootViewController = HomeViewController()
-        let nextVC = HomeViewController()
+        let nextVC = TabBarController()
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
