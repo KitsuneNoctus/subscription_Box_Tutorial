@@ -14,7 +14,11 @@ class NewHomePageViewController: UIViewController {
     
     lazy var sections: [Section] = [
         TitleSection(title: "Featured Categories"),
+        FeaturedSection(),
+//        FeaturedSection(title: "Toys"),
+//       
         TitleSection(title: "Last month's favorites")
+        
     ]
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
@@ -41,6 +45,7 @@ class NewHomePageViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         //MARK: Registered Title Cell
         collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
+        collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
         self.view.addSubview(collectionView)
         collectionView.reloadData()
     }

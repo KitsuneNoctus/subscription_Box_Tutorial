@@ -9,30 +9,35 @@
 import UIKit
 
 struct FeaturedSection: Section {
-    var numberOfItems: Int
+    var numberOfItems = 6
+    
+//    let title: String
+    // TODO: create an initializer to set the title
+    let titles = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
+//    init (title: String) {
+//        self.title = title
+//    }
     
     func layoutSection() -> NSCollectionLayoutSection? {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(0.33))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         
-        // TODO: Step 2
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        // TODO: Step 3. Try using 95% width and 35% height
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.35))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(100), heightDimension: .absolute(150))
         
-        // TODO: Step 4. You will need to specify how many items per group (3)
-        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem:item, count: 3)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
-        
-        // TODO: Step 5
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
+        section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
+        
         return section
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath) as! FeaturedCell
+        cell.set(title: titles[indexPath.row])
+        cell.backgroundColor = UIColor.purple
         return cell
     }
     

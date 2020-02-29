@@ -35,6 +35,8 @@
 		3F895FE3240B0CD5006859F0 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F895FE1240B0CD5006859F0 /* TitleCell.xib */; };
 		3F895FE6240B194C006859F0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FE4240B194C006859F0 /* ItemCell.swift */; };
 		3F895FE7240B194C006859F0 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F895FE5240B194C006859F0 /* ItemCell.xib */; };
+		3F895FEA240B2E34006859F0 /* ItemsPastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FE9240B2E34006859F0 /* ItemsPastViewController.swift */; };
+		3F895FEC240B2F13006859F0 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FEB240B2F13006859F0 /* ItemViewCell.swift */; };
 		3F933E9C23EFD1D100412E2A /* PastBoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933E9B23EFD1D100412E2A /* PastBoxesViewController.swift */; };
 		3F933E9E23EFDB4400412E2A /* shipping.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F933E9D23EFDB4400412E2A /* shipping.png */; };
 		3F933EA123F0B81400412E2A /* PastBoxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933EA023F0B81400412E2A /* PastBoxesCell.swift */; };
@@ -78,6 +80,8 @@
 		3F895FE1240B0CD5006859F0 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		3F895FE4240B194C006859F0 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		3F895FE5240B194C006859F0 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		3F895FE9240B2E34006859F0 /* ItemsPastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsPastViewController.swift; sourceTree = "<group>"; };
+		3F895FEB240B2F13006859F0 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		3F933E9B23EFD1D100412E2A /* PastBoxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxesViewController.swift; sourceTree = "<group>"; };
 		3F933E9D23EFDB4400412E2A /* shipping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shipping.png; path = "../../../../../../../Downloads/Shipping_Package_-_Colour/shipping.png"; sourceTree = "<group>"; };
 		3F933E9F23EFDB4900412E2A /* shipping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipping.png; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		3F575EB823E9EE960039CF3B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3F895FE8240B2DC9006859F0 /* ItemsPast */,
 				3FC7EC82240AFBC400E264E2 /* newBoxCollection */,
 				3F132D5D24084E5100972879 /* NewHome */,
 				3F727F5023EA9FA600BA4434 /* ViewControllerStorage.swift */,
@@ -195,6 +200,15 @@
 				3F895FD6240B0953006859F0 /* Section.swift */,
 			);
 			path = sectionDetail;
+			sourceTree = "<group>";
+		};
+		3F895FE8240B2DC9006859F0 /* ItemsPast */ = {
+			isa = PBXGroup;
+			children = (
+				3F895FE9240B2E34006859F0 /* ItemsPastViewController.swift */,
+				3F895FEB240B2F13006859F0 /* ItemViewCell.swift */,
+			);
+			path = ItemsPast;
 			sourceTree = "<group>";
 		};
 		3FC7EC82240AFBC400E264E2 /* newBoxCollection */ = {
@@ -337,6 +351,7 @@
 				3FC7EC84240AFC6200E264E2 /* CustomFlowLayout.swift in Sources */,
 				3F132D5324084A1D00972879 /* MapView.swift in Sources */,
 				3F132D5224084A1D00972879 /* ContentView.swift in Sources */,
+				3F895FEA240B2E34006859F0 /* ItemsPastViewController.swift in Sources */,
 				3F933EA323F0BE4E00412E2A /* NewBoxViewController.swift in Sources */,
 				3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */,
 				3F2BA73423F343F000E91400 /* navigationController.swift in Sources */,
@@ -346,6 +361,7 @@
 				3F132D5424084A1D00972879 /* CircleImage.swift in Sources */,
 				3F895FE6240B194C006859F0 /* ItemCell.swift in Sources */,
 				3F132D5624084B4600972879 /* PastBoxContentsViewController.swift in Sources */,
+				3F895FEC240B2F13006859F0 /* ItemViewCell.swift in Sources */,
 				3F575EC323EA07320039CF3B /* ViewControllerRefactor.swift in Sources */,
 				3F895FD5240B08E1006859F0 /* FeaturedSection.swift in Sources */,
 				3F895FDB240B0A22006859F0 /* FeaturedCell.swift in Sources */,
