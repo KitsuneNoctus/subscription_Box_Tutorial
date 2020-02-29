@@ -9,11 +9,65 @@
 import UIKit
 
 class NewHomePageViewController: UIViewController {
+    
+    var collectionView: UICollectionView!
+    
+    lazy var sections: [Section] = [
+        TitleSection(title: "Featured Categories"),
+        TitleSection(title: "Last month's favorites")
+    ]
+    
+    lazy var collectionViewLayout: UICollectionViewLayout = {
+        var section = self.sections
+        let layout = UICollectionViewCompositionalLayout{
+            (sectionIndex, environment) -> NSCollectionLayoutSection? in
+            return self.sections[sectionIndex].layoutSection()
+        }
+        return layout
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.magenta
-
-        // Do any additional setup after loading the view.
+        self.title = "Compositional Layout"
+        self.view.backgroundColor = UIColor.white
+        setupCollectionView()
+        
+    }
+    //MARK: Collection View Setup
+    func setupCollectionView(){
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.white
+        //MARK: Registered Title Cell
+        collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
+        self.view.addSubview(collectionView)
+        collectionView.reloadData()
+    }
+    //MARK: View Did Appear
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        collectionView.reloadData()
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        collectionView.reloadData()
     }
 }
+
+//MARK: Data Source
+extension NewHomePageViewController: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        sections.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        sections[section].numberOfItems
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        sections[indexPath.section].configureCell(collectionView: collectionView, indexPath: indexPath)
+    }
+}
+
+extension NewHomePageViewController: UICollectionViewDelegate {}

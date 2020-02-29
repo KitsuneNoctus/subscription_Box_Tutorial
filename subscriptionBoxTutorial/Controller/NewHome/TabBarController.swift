@@ -22,32 +22,38 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.tabBar.tintColor = UIColor.white
         
         //==============
-        let vc = NewHomePageViewController()
+        let HomeVc = NewHomePageViewController()
 //        vc.imageName = "northAmerica"
-        vc.title = "Home"
+        HomeVc.title = "Home"
 //        vc.view.backgroundColor = UIColor.blue
         //--
-        let navController = UINavigationController(rootViewController:vc)
-        vc.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
+        let navController = UINavigationController(rootViewController:HomeVc)
+        HomeVc.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
 //        vc.tabBarItem = UITabBarItem(title: vc.title, image: , selectedImage:)
         
         //===============
-        let vc2 = NewBoxPageViewController()
-        vc.title = "New"
+        let vc2 = NewBoxViewController()
+        vc2.title = "New"
         //--
         let navController2 = UINavigationController(rootViewController: vc2)
         vc2.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 1)
         
         //===============
-        let vc3 = ContentView()
-        let vc3True = UIHostingController(rootView: vc3)
+        let vc3 = PastBoxesViewController()
+        vc3.title = "Past"
+        //--
+        let navController3 = UINavigationController(rootViewController: vc3)
+        vc3.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 2)
+        //===============
+        let vc4 = ContentView()
+        let vc4True = UIHostingController(rootView: vc4)
 //        vc3.title = "Profile"
         //----
-        let navController3 = UINavigationController(rootViewController: vc3True)
-        vc3True.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated , tag: 2)
-        //===============
+        let navController4 = UINavigationController(rootViewController: vc4True)
+        vc4True.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated , tag: 3)
+      
         //The Views - The list
-        viewControllers = [navController,navController2, navController3]
+        viewControllers = [navController,navController2,navController3,navController4]
         
     }
     
