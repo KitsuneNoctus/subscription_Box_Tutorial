@@ -27,7 +27,7 @@ class PastBoxesViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //This sets root view controller to itself so it can be navigated away from I think
-        self.navigationController?.initRootViewController(vc: self)
+//        self.navigationController?.initRootViewController(vc: self)
         setTable()
         self.view.backgroundColor = .black
         getData()
