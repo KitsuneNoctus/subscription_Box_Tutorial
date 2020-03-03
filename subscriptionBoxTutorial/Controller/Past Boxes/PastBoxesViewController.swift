@@ -9,8 +9,7 @@
 import UIKit
 
 class PastBoxesViewController: UIViewController{
-//class PastBoxesViewController: UIViewController {
-    
+//    Stole some code from fellow student. https://github.com/caocmai/subscription-box/blob/master/OnboardingRefactor/Controller/ListOfBoxes.swift
     
 //    let pastBoxesArray = [String](repeating: "Past Order", count: 10)
     var testBoxes = [Box]()
@@ -23,13 +22,11 @@ class PastBoxesViewController: UIViewController{
        table.rowHeight = 100
        return table
     }()
+    
 //MARK: View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-        //This sets root view controller to itself so it can be navigated away from I think
-//        self.navigationController?.initRootViewController(vc: self)
         setTable()
-        self.view.backgroundColor = .black
         getData()
 
         // Do any additional setup after loading the view.
@@ -37,24 +34,29 @@ class PastBoxesViewController: UIViewController{
     
     func setTable(){
         self.view.addSubview(table)
+        self.view.backgroundColor = .white
+        
+        table.register(PastBoxesCell.self, forCellReuseIdentifier: PastBoxesCell.identifier)
+        
+        table.delegate = self
+        table.dataSource = self
+        
         NSLayoutConstraint.activate([
             table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
             table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
             table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
         ])
-
-        table.register(PastBoxesCell.self, forCellReuseIdentifier: PastBoxesCell.identifier)
-        table.delegate = self
-        table.dataSource = self
     }
     
     func getData(){
-        let box = Box(date: "Feburaury 2020", items:[])
+        let ball = Item(name: "Ball", image: "")
+        
+        let box = Box(date: "Feburaury 2020", items: [ball,ball,ball,ball])
         testBoxes.append(box)
-        let box2 = Box(date: "Januarauryry 2020", items:[])
+        let box2 = Box(date: "Januarauryry 2020", items: [ball,ball,ball])
         testBoxes.append(box2)
-        let box3 = Box(date: "December 2019", items:[])
+        let box3 = Box(date: "December 2019", items: [ball,ball])
         testBoxes.append(box3)
     }
 
@@ -74,11 +76,10 @@ extension PastBoxesViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
         
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ItemsPastViewController()
-//        vc.testItems = testBoxes[indexPath.row]
+        vc.theBox = testBoxes[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
-//        self.navigationController?.popToViewController(vc, animated: true)
     }
 }
 

@@ -9,8 +9,12 @@
 import UIKit
 
 class ItemsPastViewController: UIViewController {
-
-    var testItems = [Item]()
+    //    Stole some code from fellow student. https://github.com/caocmai/   ...
+    
+    var theBox: Box!
+    
+    var itemName: [String] = []
+    var itemImage: [String] = []
     
     //MARK: Setting up UITableView
     let table: UITableView = {
@@ -22,44 +26,45 @@ class ItemsPastViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            self.navigationController?.initRootViewController(vc: self)
             setTable()
-            self.view.backgroundColor = .black
             getData()
-
-            // Do any additional setup after loading the view.
-        }
+    }
         
-        func setTable(){
-            self.view.addSubview(table)
-            NSLayoutConstraint.activate([
-                table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
-                table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
-                table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
-                table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
-            ])
-
-            table.register(PastBoxesCell.self, forCellReuseIdentifier: PastBoxesCell.identifier)
-            table.delegate = self
-            table.dataSource = self
-        }
+    func setTable(){
+        self.view.addSubview(table)
+        self.view.backgroundColor = .white
         
-        func getData(){
-            let item = Item(name: "Thing 1", image: "")
-            testItems.append(item)
-            let item2 = Item(name: "Thing 2", image: "")
-            testItems.append(item2)
+        table.register(ItemViewCell.self, forCellReuseIdentifier: ItemViewCell.identifier)
+        table.delegate = self
+        table.dataSource = self
+        
+        NSLayoutConstraint.activate([
+            table.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+            table.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+            table.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
+            table.bottomAnchor.constraint(equalTo: view.layoutMarginsGuide.bottomAnchor)
+        ])
+    }
+        
+    func getData(){
+        let items = theBox!.items
+        
+        for item in items{
+            itemName.append(item.name)
+            itemImage.append(item.image)
         }
+    }
 }
 
 extension ItemsPastViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testItems.count
+        return theBox.items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemViewCell.identifier, for: indexPath) as! ItemViewCell
-            cell.setContents(item: testItems[indexPath.row])
+        
+        cell.textLabel?.text = "\(itemName[indexPath.row]) \(theBox.date)"
         return cell
     }
     

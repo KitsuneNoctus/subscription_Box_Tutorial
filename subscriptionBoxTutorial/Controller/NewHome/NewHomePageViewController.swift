@@ -46,6 +46,8 @@ class NewHomePageViewController: UIViewController {
         //MARK: Registered Title Cell
         collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
         collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
+        collectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: ItemViewCell.identifier)
+        //--------------------------------
         self.view.addSubview(collectionView)
         collectionView.reloadData()
     }

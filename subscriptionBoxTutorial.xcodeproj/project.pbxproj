@@ -14,6 +14,7 @@
 		3F132D5C24084CA100972879 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F132D5B24084CA100972879 /* TabBarController.swift */; };
 		3F2BA73223F31FC800E91400 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA73123F31FC800E91400 /* File.swift */; };
 		3F2BA73423F343F000E91400 /* navigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2BA73323F343F000E91400 /* navigationController.swift */; };
+		3F2FD6C7240E147900DB27CD /* ItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FD6C6240E147900DB27CD /* ItemSection.swift */; };
 		3F575EB623E9EE7E0039CF3B /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EB523E9EE7E0039CF3B /* customView.swift */; };
 		3F575EBB23E9FC630039CF3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EBA23E9FC630039CF3B /* LoginViewController.swift */; };
 		3F575EBD23E9FC870039CF3B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F575EBC23E9FC870039CF3B /* HomeViewController.swift */; };
@@ -56,6 +57,7 @@
 		3F132D5B24084CA100972879 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3F2BA73123F31FC800E91400 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3F2BA73323F343F000E91400 /* navigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = navigationController.swift; sourceTree = "<group>"; };
+		3F2FD6C6240E147900DB27CD /* ItemSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemSection.swift; sourceTree = "<group>"; };
 		3F575EB523E9EE7E0039CF3B /* customView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		3F575EBA23E9FC630039CF3B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3F575EBC23E9FC870039CF3B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				3F895FDF240B0C6E006859F0 /* sectionDetail */,
 				3F895FD4240B08E1006859F0 /* FeaturedSection.swift */,
 				3F895FDD240B0C5D006859F0 /* TitleSection.swift */,
+				3F2FD6C6240E147900DB27CD /* ItemSection.swift */,
 			);
 			path = sections;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				3F575EB623E9EE7E0039CF3B /* customView.swift in Sources */,
 				3F895FE2240B0CD5006859F0 /* TitleCell.swift in Sources */,
 				3FD8B5E323E0BC1D006DCE5C /* AppDelegate.swift in Sources */,
+				3F2FD6C7240E147900DB27CD /* ItemSection.swift in Sources */,
 				3FC7EC84240AFC6200E264E2 /* CustomFlowLayout.swift in Sources */,
 				3F132D5324084A1D00972879 /* MapView.swift in Sources */,
 				3F132D5224084A1D00972879 /* ContentView.swift in Sources */,
