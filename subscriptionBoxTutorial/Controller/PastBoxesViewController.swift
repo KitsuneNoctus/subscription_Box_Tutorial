@@ -8,24 +8,12 @@
 
 import UIKit
 
-class PastBoxesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PastBoxesViewController: UIViewController{
 //class PastBoxesViewController: UIViewController {
     
     
 //    let pastBoxesArray = [String](repeating: "Past Order", count: 10)
     var testBoxes = [Box]()
-    
-//
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testBoxes.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: PastBoxesCell.identifier, for: indexPath) as! PastBoxesCell
-//        cell.textLabel?.text = "\(indexPath.row) \(testBoxes[indexPath.row].date)"
-        cell.setContents(box:testBoxes[indexPath.row])
-        return cell
-    }
 //
 //
     //MARK: Setting up UITableView
@@ -69,23 +57,28 @@ class PastBoxesViewController: UIViewController, UITableViewDelegate, UITableVie
         let box3 = Box(date: "December 2019", items:[])
         testBoxes.append(box3)
     }
-    
-
-    
-//    extension someType: UITableViewDelegate, UITableViewDataSource {
-//
-//        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//            return pastBoxesArray.count
-//        }
-//
-//        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "pastBoxesCell", for: indexPath)
-//            cell.textLabel?.text = "\(indexPath.row) \(pastBoxesArray[indexPath.row])"
-//            return cell
-//        }
-//
-//    }
 
 
+}
+
+//MARK: Extensions
+extension PastBoxesViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+            return testBoxes.count
+        }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: PastBoxesCell.identifier, for: indexPath) as! PastBoxesCell
+//        cell.textLabel?.text = "\(indexPath.row) \(testBoxes[indexPath.row].date)"
+        cell.setContents(box:testBoxes[indexPath.row])
+        return cell
+    }
+        
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let vc = ItemsPastViewController()
+//        vc.testItems = testBoxes[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
+//        self.navigationController?.popToViewController(vc, animated: true)
+    }
 }
 
