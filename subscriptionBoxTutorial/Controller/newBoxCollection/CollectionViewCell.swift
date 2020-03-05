@@ -23,6 +23,8 @@ class CollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.layer.cornerRadius = 5
+        
         self.contentView.addSubview(imageView)
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
