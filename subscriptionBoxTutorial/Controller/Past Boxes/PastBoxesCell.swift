@@ -15,10 +15,18 @@ class PastBoxesCell: UITableViewCell {
     let background: UIView = {
         let background = UIView()
         background.layer.cornerRadius = 5
-//        background.backgroundColor = #colorLiteral(red: 0.8186396956, green: 0.7955000997, blue: 1, alpha: 1)
+        background.backgroundColor = #colorLiteral(red: 0.8186396956, green: 0.7955000997, blue: 1, alpha: 1)
         background.layer.masksToBounds = true
         background.translatesAutoresizingMaskIntoConstraints = false
         return background
+    }()
+    
+    let boxImage: UIImageView = {
+        let boxImage = UIImageView()
+        boxImage.contentMode = .scaleAspectFit
+        boxImage.clipsToBounds = true
+        boxImage.translatesAutoresizingMaskIntoConstraints = false
+        return boxImage
     }()
 
     override func awakeFromNib() {
@@ -48,6 +56,13 @@ class PastBoxesCell: UITableViewCell {
             background.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
             background.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
+        ])
+        
+        self.contentView.addSubview(boxImage)
+        NSLayoutConstraint.activate([
+            boxImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
+            boxImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
+            boxImage.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 30)
         ])
         
     }

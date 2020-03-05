@@ -72,6 +72,7 @@ extension PastBoxesViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PastBoxesCell.identifier, for: indexPath) as! PastBoxesCell
 //        cell.textLabel?.text = "\(indexPath.row) \(testBoxes[indexPath.row].date)"
+        cell.boxImage.image = UIImage(named: "shipping")
         cell.setContents(box:testBoxes[indexPath.row])
         return cell
     }

@@ -1,7 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:/Users/NaitoHarmonia/Documents/MAKE-SCHOOL/Term 3/MOB1.2/subscriptionBoxTutorial/subscriptionBoxTutorial/Assets.xcassets"
+      name = "Assets.xcassets">
+      <Group
+         location = "group:phone.imageset"
+         name = "phone.imageset">
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+         <FileRef
+            location = "group:phone.png">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:tabBarItems"
+         name = "tabBarItems">
+         <Group
+            location = "group:user.imageset"
+            name = "user.imageset">
+            <FileRef
+               location = "group:user.png">
+            </FileRef>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:product.imageset"
+            name = "product.imageset">
+            <FileRef
+               location = "group:product.png">
+            </FileRef>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:clock.imageset"
+            name = "clock.imageset">
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+            <FileRef
+               location = "group:clock.png">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+         <Group
+            location = "group:home.imageset"
+            name = "home.imageset">
+            <FileRef
+               location = "group:home.png">
+            </FileRef>
+            <FileRef
+               location = "group:Contents.json">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:dog.imageset"
+         name = "dog.imageset">
+         <FileRef
+            location = "group:dog.png">
+         </FileRef>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:shipping.imageset"
+         name = "shipping.imageset">
+         <FileRef
+            location = "group:shipping.png">
+         </FileRef>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:AppIcon.appiconset"
+         name = "AppIcon.appiconset">
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:petFood.imageset"
+         name = "petFood.imageset">
+         <FileRef
+            location = "group:petFood.png">
+         </FileRef>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Contents.json">
+      </FileRef>
+      <Group
+         location = "group:ball.imageset"
+         name = "ball.imageset">
+         <FileRef
+            location = "group:ball.png">
+         </FileRef>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:corgi.imageset"
+         name = "corgi.imageset">
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+         <FileRef
+            location = "group:corgi.png">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:turtlerock.imageset"
+         name = "turtlerock.imageset">
+         <FileRef
+            location = "group:turtlerock.jpg">
+         </FileRef>
+         <FileRef
+            location = "group:Contents.json">
+         </FileRef>
+      </Group>
+   </Group>
    <FileRef
-      location = "self:subscriptionBoxTutorial.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

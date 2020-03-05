@@ -20,6 +20,14 @@ class ItemViewCell: UITableViewCell {
             background.translatesAutoresizingMaskIntoConstraints = false
             return background
         }()
+    
+    let itemImage: UIImageView = {
+        let itemImage = UIImageView()
+        itemImage.contentMode = .scaleAspectFit
+        itemImage.clipsToBounds = true
+        itemImage.translatesAutoresizingMaskIntoConstraints = false
+        return itemImage
+    }()
 
         override func awakeFromNib() {
             super.awakeFromNib()
@@ -43,12 +51,19 @@ class ItemViewCell: UITableViewCell {
         }
         
         func setup(){
-            self.contentView.addSubview(background)
+//            self.contentView.addSubview(background)
+//            NSLayoutConstraint.activate([
+//                background.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
+//                background.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
+//                background.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+//                background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
+//            ])
+            
+            self.contentView.addSubview(itemImage)
             NSLayoutConstraint.activate([
-                background.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
-                background.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor),
-                background.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-                background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
+                itemImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: -40),
+                itemImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
+                itemImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5)
             ])
             
         }

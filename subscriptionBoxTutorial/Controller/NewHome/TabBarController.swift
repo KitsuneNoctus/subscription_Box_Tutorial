@@ -26,29 +26,30 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         HomeVc.title = "Home"
         //-----
         let navController = UINavigationController(rootViewController:HomeVc)
-        HomeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: ""), tag: 0)
+        HomeVc.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
         
         //===============
         let vc2 = NewBoxViewController()
         vc2.title = "New Box"
         //--
         let navController2 = UINavigationController(rootViewController: vc2)
-        vc2.tabBarItem = UITabBarItem(title: "New Box", image: UIImage(named: ""), tag: 1)
+        vc2.tabBarItem = UITabBarItem(title: "New Box", image: UIImage(named: "product"), tag: 1)
         
         //===============
         let vc3 = PastBoxesViewController()
         vc3.title = "Past Orders"
         //--
         let navController3 = UINavigationController(rootViewController: vc3)
-        vc3.tabBarItem = UITabBarItem(title: "Old", image: UIImage(named: ""), tag: 2)
+        vc3.tabBarItem = UITabBarItem(title: "Old", image: UIImage(named: "clock"), tag: 2)
         
         //===============
         let vc4 = ContentView()
         let vc4True = UIHostingController(rootView: vc4)
+        vc4True.title = "Profile"
 
         //----
         let navController4 = UINavigationController(rootViewController: vc4True)
-        vc4True.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: ""), tag: 3)
+        vc4True.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "user"), tag: 3)
       
         //The Views - The list
         viewControllers = [navController,navController2,navController3,navController4]
