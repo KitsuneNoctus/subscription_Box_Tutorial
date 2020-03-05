@@ -50,7 +50,7 @@ class NewBoxViewController: UIViewController {
 
 }
 
-extension NewBoxViewController: UICollectionViewDataSource {
+extension NewBoxViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
@@ -60,16 +60,29 @@ extension NewBoxViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
+//        if indexPath == {
+//            cell.backgroundColor = #colorLiteral(red: 1, green: 0.5756825209, blue: 0.5681426525, alpha: 0.9445098459)
+//        }else{
+//            cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+//        }
         cell.imageView.image = UIImage(named: self.data[indexPath.row].image)
         cell.textLabel.text = "\(self.data[indexPath.row].name)"
         cell.textLabel.textColor = UIColor.white
         return cell
     }
-}
-
-extension NewBoxViewController: UICollectionViewDelegate {
     
+//    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+//        if selectedIndexPath == indexPath {
+//          selectedIndexPath = nil
+//        } else {
+//          selectedIndexPath = indexPath
+//        }
+//          return false
+//    }
+//
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell: CollectionViewCell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
+        cell.backgroundColor = .brown
         print("Selected an Item")
     }
 }

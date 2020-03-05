@@ -99,11 +99,7 @@ class LoginViewController: UIViewController {
         setLabel()
         setButton()
         setTextFields()
-//        setup()
-//        setTitle()
-//        setLoginButton()
-//        setLoginTextFields()
-//        setImageView()
+
     }
     
 //==============================================================
