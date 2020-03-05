@@ -59,12 +59,12 @@ class ItemViewCell: UITableViewCell {
 //                background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
 //            ])
             
-            self.contentView.addSubview(itemImage)
-            NSLayoutConstraint.activate([
-                itemImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: -40),
-                itemImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
-                itemImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5)
-            ])
+//            self.contentView.addSubview(itemImage)
+//            NSLayoutConstraint.activate([
+//                itemImage.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: -40),
+//                itemImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
+//                itemImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5)
+//            ])
             
         }
         

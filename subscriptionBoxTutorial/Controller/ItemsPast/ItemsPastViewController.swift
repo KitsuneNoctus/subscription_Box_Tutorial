@@ -63,9 +63,14 @@ extension ItemsPastViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ItemViewCell.identifier, for: indexPath) as! ItemViewCell
-        cell.itemImage.image = UIImage(named: "ball")
+        cell.imageView?.image = UIImage(named: "ball")
+//        cell.itemImage.image = UIImage(named: "ball")
         cell.textLabel?.text = "\(itemName[indexPath.row]) \(theBox.date)"
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Past Item Selected")
     }
     
     

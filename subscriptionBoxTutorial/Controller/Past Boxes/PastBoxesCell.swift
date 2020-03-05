@@ -58,12 +58,12 @@ class PastBoxesCell: UITableViewCell {
             background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor)
         ])
         
-        self.contentView.addSubview(boxImage)
-        NSLayoutConstraint.activate([
-            boxImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
-            boxImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
-            boxImage.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 30)
-        ])
+//        self.contentView.addSubview(boxImage)
+//        NSLayoutConstraint.activate([
+//            boxImage.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 5),
+//            boxImage.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -5),
+//            boxImage.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: 30)
+//        ])
         
     }
     

@@ -10,8 +10,14 @@ import UIKit
 
 struct FeaturedSection: Section {
     
-    let titles = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
-    let itemImages = ["petFood","petFood","petFood","petFood","petFood","petFood","petFood"]
+    let data: [Category] = [
+        Category(name: "Food", image: "petFood"),
+        Category(name: "Toys", image: "dogtoy"),
+        Category(name: "Treats",image:"treat"),
+        Category(name: "Grooming", image: "dogbrush"),
+        Category(name: "Meds", image: "meds"),
+        Category(name: "Accesories", image: "collar")
+    ]
     
     var numberOfItems = 6
     
@@ -31,34 +37,10 @@ struct FeaturedSection: Section {
 
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath) as! FeaturedCell
-        cell.featuredLabel.text = titles[indexPath.row]
-        cell.featuredImage.image = UIImage(named: itemImages[indexPath.row])
+        cell.featuredLabel.text = data[indexPath.row].name
+        cell.featuredImage.image = UIImage(named: data[indexPath.row].image)
         return cell
     }
     
-    // TODO: create an initializer to set the title
-//    let titles = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
-//
-//    func layoutSection() -> NSCollectionLayoutSection? {
-//        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-//
-//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-//
-////        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(100), heightDimension: .absolute(150))
-//        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(0.33))
-//
-//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-//
-//        let section = NSCollectionLayoutSection(group: group)
-//        section.orthogonalScrollingBehavior = .continuous
-//
-//        return section
-//    }
-//
-//    func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath) as! FeaturedCell
-//        cell.set(title: titles[indexPath.row])
-//        return cell
-//    }
     
 }

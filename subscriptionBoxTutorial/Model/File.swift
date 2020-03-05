@@ -22,22 +22,6 @@ struct Box {
 
 struct Category {
     let name: String
+    let image: String
 }
 
-//MARK: My Own Additions
-// My own custom model data
-enum Themes {
-    case Halloween
-    case Christmas
-    case Thanksgiving
-    case Valentines
-}
-
-struct Themed {
-    let isThemed: Bool
-    let theTheme: [Themes]
-}
-//MARK: The User
-struct User {
-    
-}

@@ -29,8 +29,14 @@ class NewBoxViewController: UIViewController {
         return collectionView
     }()
     
-    var data: [String] = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
-    var imageData: [String] = ["Ball","Ball","Ball","Ball","Ball","Ball"]
+    let data: [Category] = [
+        Category(name: "Food", image: "petFood"),
+        Category(name: "Toys", image: "dogtoy"),
+        Category(name: "Treats",image:"treat"),
+        Category(name: "Grooming", image: "dogbrush"),
+        Category(name: "Meds", image: "meds"),
+        Category(name: "Accesories", image: "collar")
+    ]
     
     override func loadView() {
         super.loadView()
@@ -54,8 +60,8 @@ extension NewBoxViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        cell.imageView.image = UIImage(named: "ball")
-        cell.textLabel.text = "\(self.data[indexPath.row])"
+        cell.imageView.image = UIImage(named: self.data[indexPath.row].image)
+        cell.textLabel.text = "\(self.data[indexPath.row].name)"
         cell.textLabel.textColor = UIColor.white
         return cell
     }
@@ -64,6 +70,6 @@ extension NewBoxViewController: UICollectionViewDataSource {
 extension NewBoxViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print("Selected an Item")
     }
 }
