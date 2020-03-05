@@ -32,14 +32,14 @@
 		3F895FDE240B0C5D006859F0 /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FDD240B0C5D006859F0 /* TitleSection.swift */; };
 		3F895FE2240B0CD5006859F0 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FE0240B0CD5006859F0 /* TitleCell.swift */; };
 		3F895FE3240B0CD5006859F0 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F895FE1240B0CD5006859F0 /* TitleCell.xib */; };
-		3F895FE6240B194C006859F0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FE4240B194C006859F0 /* ItemCell.swift */; };
-		3F895FE7240B194C006859F0 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F895FE5240B194C006859F0 /* ItemCell.xib */; };
 		3F895FEA240B2E34006859F0 /* ItemsPastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FE9240B2E34006859F0 /* ItemsPastViewController.swift */; };
 		3F895FEC240B2F13006859F0 /* ItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F895FEB240B2F13006859F0 /* ItemViewCell.swift */; };
 		3F933E9C23EFD1D100412E2A /* PastBoxesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933E9B23EFD1D100412E2A /* PastBoxesViewController.swift */; };
 		3F933E9E23EFDB4400412E2A /* shipping.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F933E9D23EFDB4400412E2A /* shipping.png */; };
 		3F933EA123F0B81400412E2A /* PastBoxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933EA023F0B81400412E2A /* PastBoxesCell.swift */; };
 		3F933EA323F0BE4E00412E2A /* NewBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F933EA223F0BE4E00412E2A /* NewBoxViewController.swift */; };
+		3FBDEE8A2410752F0028673E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBDEE882410752F0028673E /* ItemCell.swift */; };
+		3FBDEE8B2410752F0028673E /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBDEE892410752F0028673E /* ItemCell.xib */; };
 		3FC7EC84240AFC6200E264E2 /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7EC83240AFC6200E264E2 /* CustomFlowLayout.swift */; };
 		3FC7EC86240AFCC100E264E2 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC7EC85240AFCC100E264E2 /* CollectionViewCell.swift */; };
 		3FD8B5E323E0BC1D006DCE5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD8B5E223E0BC1D006DCE5C /* AppDelegate.swift */; };
@@ -75,8 +75,6 @@
 		3F895FDD240B0C5D006859F0 /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
 		3F895FE0240B0CD5006859F0 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		3F895FE1240B0CD5006859F0 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
-		3F895FE4240B194C006859F0 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
-		3F895FE5240B194C006859F0 /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		3F895FE9240B2E34006859F0 /* ItemsPastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsPastViewController.swift; sourceTree = "<group>"; };
 		3F895FEB240B2F13006859F0 /* ItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewCell.swift; sourceTree = "<group>"; };
 		3F933E9B23EFD1D100412E2A /* PastBoxesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxesViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +82,8 @@
 		3F933E9F23EFDB4900412E2A /* shipping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shipping.png; sourceTree = "<group>"; };
 		3F933EA023F0B81400412E2A /* PastBoxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxesCell.swift; sourceTree = "<group>"; };
 		3F933EA223F0BE4E00412E2A /* NewBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBoxViewController.swift; sourceTree = "<group>"; };
+		3FBDEE882410752F0028673E /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		3FBDEE892410752F0028673E /* ItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		3FC7EC83240AFC6200E264E2 /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
 		3FC7EC85240AFCC100E264E2 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		3FD8B5DF23E0BC1D006DCE5C /* subscriptionBoxTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = subscriptionBoxTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,8 +198,8 @@
 				3F895FDA240B0A22006859F0 /* FeaturedCell.xib */,
 				3F895FE0240B0CD5006859F0 /* TitleCell.swift */,
 				3F895FE1240B0CD5006859F0 /* TitleCell.xib */,
-				3F895FE4240B194C006859F0 /* ItemCell.swift */,
-				3F895FE5240B194C006859F0 /* ItemCell.xib */,
+				3FBDEE882410752F0028673E /* ItemCell.swift */,
+				3FBDEE892410752F0028673E /* ItemCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				3F727F4D23EA9B1A00BA4434 /* phone.png in Resources */,
 				3F727F4B23EA9AA800BA4434 /* petFood.png in Resources */,
 				3F933E9E23EFDB4400412E2A /* shipping.png in Resources */,
-				3F895FE7240B194C006859F0 /* ItemCell.xib in Resources */,
+				3FBDEE8B2410752F0028673E /* ItemCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +368,7 @@
 				3F2BA73223F31FC800E91400 /* File.swift in Sources */,
 				3F575EC123E9FCC00039CF3B /* HomeView.swift in Sources */,
 				3F132D5424084A1D00972879 /* CircleImage.swift in Sources */,
-				3F895FE6240B194C006859F0 /* ItemCell.swift in Sources */,
+				3FBDEE8A2410752F0028673E /* ItemCell.swift in Sources */,
 				3F895FEC240B2F13006859F0 /* ItemViewCell.swift in Sources */,
 				3F575EC323EA07320039CF3B /* ViewControllerRefactor.swift in Sources */,
 				3F895FD5240B08E1006859F0 /* FeaturedSection.swift in Sources */,

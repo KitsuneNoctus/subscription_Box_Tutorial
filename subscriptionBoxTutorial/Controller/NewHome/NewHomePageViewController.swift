@@ -15,9 +15,8 @@ class NewHomePageViewController: UIViewController {
     lazy var sections: [Section] = [
         TitleSection(title: "Featured Categories"),
         FeaturedSection(),
-//        FeaturedSection(title: "Toys"),
-//       
-        TitleSection(title: "Last month's favorites")
+        TitleSection(title: "Last month's favorites"),
+        ItemSection()
         
     ]
     
@@ -32,7 +31,7 @@ class NewHomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Compositional Layout"
+        self.title = "Home"
         self.view.backgroundColor = UIColor.white
         setupCollectionView()
         
@@ -45,8 +44,11 @@ class NewHomePageViewController: UIViewController {
         collectionView.backgroundColor = UIColor.white
         //MARK: Registered Title Cell
         collectionView.register(UINib(nibName: "TitleCell", bundle: .main), forCellWithReuseIdentifier: TitleCell.identifier)
+        
         collectionView.register(UINib(nibName: "FeaturedCell", bundle: .main), forCellWithReuseIdentifier: FeaturedCell.identifier)
-        collectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: ItemViewCell.identifier)
+        
+        collectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: ItemCell.identifier)
+//        collectionView.register(UINib(nibName: "ItemCell", bundle: .main), forCellWithReuseIdentifier: ItemViewCell.identifier)
         //--------------------------------
         self.view.addSubview(collectionView)
         collectionView.reloadData()

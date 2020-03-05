@@ -9,36 +9,56 @@
 import UIKit
 
 struct FeaturedSection: Section {
+    
+    let titles = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
+    let itemImages = ["petFood","petFood","petFood","petFood","petFood","petFood","petFood"]
+    
     var numberOfItems = 6
     
-//    let title: String
-    // TODO: create an initializer to set the title
-    let titles = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
-//    init (title: String) {
-//        self.title = title
-//    }
-    
     func layoutSection() -> NSCollectionLayoutSection? {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
-        
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.9))
+        //========
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(100), heightDimension: .absolute(150))
-        
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
-        
+        //========
+        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(150), heightDimension: .absolute(200))
+        //========
+        let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
+        //========
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 0)
-        
         return section
     }
-    
+
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath) as! FeaturedCell
-        cell.set(title: titles[indexPath.row])
-        cell.backgroundColor = UIColor.purple
+        cell.featuredLabel.text = titles[indexPath.row]
+        cell.featuredImage.image = UIImage(named: itemImages[indexPath.row])
         return cell
     }
+    
+    // TODO: create an initializer to set the title
+//    let titles = ["Food","Toys","Treats","Grooming Supplies","Meds","Collars"]
+//
+//    func layoutSection() -> NSCollectionLayoutSection? {
+//        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+//
+//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//
+////        let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(100), heightDimension: .absolute(150))
+//        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.33), heightDimension: .fractionalHeight(0.33))
+//
+//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+//
+//        let section = NSCollectionLayoutSection(group: group)
+//        section.orthogonalScrollingBehavior = .continuous
+//
+//        return section
+//    }
+//
+//    func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath) as! FeaturedCell
+//        cell.set(title: titles[indexPath.row])
+//        return cell
+//    }
     
 }

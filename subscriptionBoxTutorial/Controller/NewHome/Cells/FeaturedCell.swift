@@ -16,8 +16,6 @@ class FeaturedCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
-//        self.backgroundView?.backgroundColor = UIColor.purple
-        // Initialization code
     }
     
     func set(title: String) {

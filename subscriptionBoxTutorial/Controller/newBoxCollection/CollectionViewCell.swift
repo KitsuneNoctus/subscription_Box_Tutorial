@@ -12,8 +12,24 @@ class CollectionViewCell: UICollectionViewCell {
     static var identifier: String = "CCell"
     var textLabel: UILabel!
     
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.contentView.addSubview(imageView)
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
+            imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
+            imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10)
+        ])
         
         //Adding text label inside the cell
         let textLabel = UILabel(frame: .zero)
@@ -22,8 +38,8 @@ class CollectionViewCell: UICollectionViewCell {
         
         //Constraints
         NSLayoutConstraint.activate([
-            self.contentView.centerXAnchor.constraint(equalTo: textLabel.centerXAnchor),
-            self.contentView.centerYAnchor.constraint(equalTo: textLabel.centerYAnchor),
+            textLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            textLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor)
         ])
         
         //Customization

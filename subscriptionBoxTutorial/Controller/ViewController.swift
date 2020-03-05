@@ -97,6 +97,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         ])
     }
     
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+        pageControl.currentPage = Int(pageNumber)
+    }
+    
     @objc func continueTapped(){
 //        self.view.window!.rootViewController = LoginViewController()
         let nextVC = LoginViewController()

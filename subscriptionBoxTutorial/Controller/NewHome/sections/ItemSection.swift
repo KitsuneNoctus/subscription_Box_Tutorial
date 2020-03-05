@@ -12,14 +12,14 @@ struct ItemSection: Section {
     var numberOfItems = 6
     
     // TODO: create an initializer to set the title
-    let item = Item(name: "Dog Collar", image: "")
+    let item = Item(name: "Ball", image: "ball")
     
     func layoutSection() -> NSCollectionLayoutSection? {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(0.33))
         
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.75), heightDimension: .fractionalHeight(0.35))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.35))
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitems: [item])
         
@@ -31,9 +31,9 @@ struct ItemSection: Section {
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath) as! FeaturedCell
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ItemViewCell.self), for: indexPath) as! ItemViewCell
-//        cell.setContents(item: item )
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ItemCell.self), for: indexPath) as! ItemCell
+        cell.itemImage.image = UIImage(named: item.image)
+        cell.itemLabel.text = "\(item.name)"
         return cell
     }
     
