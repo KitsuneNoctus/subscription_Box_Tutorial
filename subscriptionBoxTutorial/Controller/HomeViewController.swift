@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//MARK: Now Outdated
 class HomeViewController: UIViewController {
 //    let navBar: UINavigationBar!
     
