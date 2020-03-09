@@ -26,23 +26,26 @@ class CollectionViewCell: UICollectionViewCell {
         self.layer.cornerRadius = 5
         
         self.contentView.addSubview(imageView)
+        
+        let textLabel = UILabel(frame: .zero)
+        textLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.contentView.addSubview(textLabel)
+        
+        NSLayoutConstraint.activate([
+            textLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            textLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor)
+        ])
+        
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
-            imageView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
+            imageView.bottomAnchor.constraint(equalTo: textLabel.topAnchor, constant: -10),
             imageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10),
             imageView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor, constant: -10)
         ])
         
         //Adding text label inside the cell
-        let textLabel = UILabel(frame: .zero)
-        textLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.addSubview(textLabel)
         
         //Constraints
-        NSLayoutConstraint.activate([
-            textLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10),
-            textLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor)
-        ])
         
         //Customization
         self.backgroundColor = UIColor.purple
